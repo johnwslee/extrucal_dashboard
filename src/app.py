@@ -621,6 +621,5 @@ def show_sheet_table(
         )
     return output.to_html()
 
-
 if __name__ == '__main__':
     app.run_server(debug=True)
