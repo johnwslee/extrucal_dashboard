@@ -1,0 +1,191 @@
+alabaster @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/48/57/b7/0e44080d4c6f80ece83e427f90368b376fdec42759b60c2c37a04da23b/alabaster-0.7.12-py2.py3-none-any.whl
+altair @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/54/fc/8c/c9ba0a0cd95f067ee6d710bbd9950f95c2e075d794ab8d077c4eeca065/altair-4.2.0-py3-none-any.whl
+altair-data-server @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/1b/71/77/1e1413ec9fa8ce5e6a3ff52480c64feb5fd315766f5b9a566c32d242a1/altair_data_server-0.4.1-py3-none-any.whl
+altair-saver @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/c0/3b/d0/47e427b83437a00059375dc37f101d6da82de10402fc55944aed14cccb/altair_saver-0.5.0-py3-none-any.whl
+altair-viewer @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/c1/ed/bd/a8a6ff116a5a85ffe500aba973519cf0368a94254b289d7b5c0f402aab/altair_viewer-0.4.0-py3-none-any.whl
+anyio @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/3c/2e/0f/4a21a63af045159f769fb9feb820775a682870a69ff8b9b1f3f66304e2/anyio-3.5.0-py3-none-any.whl
+argon2-cffi @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/e5/36/34/bf219434f7144f39ec847b03dc7626b6d79dd2ce22f0dd27be6a6f2656/argon2_cffi-21.3.0-py3-none-any.whl
+argon2-cffi-bindings @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/aa/0b/05/828ca9c539683c29b4373243bc20447522be4a6208e295afd1d720a7bd/argon2_cffi_bindings-21.2.0-cp36-abi3-win_amd64.whl
+astroid @ file:///D:/bld/astroid_1642537038862/work
+asttokens @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/cc/f5/53/c8c73ee645bbb70b6b0ce34f55ed59b6f3f3238881f15a7e44ebe2ce2d/asttokens-2.0.5-py2.py3-none-any.whl
+async-generator @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/fe/72/db/709736555b02c2d1ae90038b7b05138b15e24edde3aa7556fc2507a90f/async_generator-1.10-py3-none-any.whl
+atomicwrites @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b7/99/9c/c8ddc18c8225c740fc2ae6d503da3f93d5dddaf04afac3da460afacbc6/atomicwrites-1.4.0-py2.py3-none-any.whl
+attrs @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/5b/25/94/5d165cd3190cb7dfdc98de86c28e8131fc6e19d83a504412664abffec0/attrs-21.4.0-py2.py3-none-any.whl
+Babel @ file:///home/conda/feedstock_root/build_artifacts/babel_1619719576210/work
+backcall @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/43/8e/e8/4e598704edf6fb4a53d552ea511c04e9958dcf850897760e5387878b99/backcall-0.2.0-py2.py3-none-any.whl
+black @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/66/cf/2a/768608e16b09ff950effeeba643f0c3c52528bb0769ce6eadf7797a3c6/black-22.1.0-cp39-cp39-win_amd64.whl
+bleach @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/db/42/1e/1062d618eece64f515d716a5cb98eace54768d5af54a9273b1f554eaec/bleach-4.1.0-py2.py3-none-any.whl
+Brotli==1.0.9
+brotlipy @ file:///D:/bld/brotlipy_1636012392748/work
+CacheControl==0.12.10
+cachy==0.3.0
+certifi==2021.10.8
+cffi @ file:///D:/bld/cffi_1636046278333/work
+charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1644853463426/work
+cleo==0.8.1
+click @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/fb/bd/e7/ac3267cdaa4ac3cfcde3b3d14d7d2b92aaf38d8a34437d49e873b8289e/click-8.0.4-py3-none-any.whl
+click-log @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/4e/27/12/839f75e49d11a146b2aa59afce8990462f986e0bfd6c8f3cac5ac71a0f/click_log-0.3.2-py2.py3-none-any.whl
+clikit==0.6.2
+codecov @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/c0/06/66/940985c49bdf8952ee39f63301005579fd3a0fa6c10bbf8f4f6ef1e558/codecov-2.1.12-py2.py3-none-any.whl
+colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1602866480661/work
+coverage @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/cd/9f/44/f49b552fca4542cf76e2e2ceafd57b15823c391b19cda5cf0766389579/coverage-6.3.2-cp39-cp39-win_amd64.whl
+crashtest==0.3.1
+cryptography @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/a0/0a/72/ae8e5049c71dbcacea90787485483a27627a3deb7c97757a6d67294adf/cryptography-36.0.1-cp36-abi3-win_amd64.whl
+dash==2.6.0
+dash-bootstrap-components==1.2.0
+dash-core-components==2.0.0
+dash-html-components==2.0.0
+dash-table==5.0.0
+debugpy @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/37/97/68/fc135f9122d3228a7cdbd27f14747fa2eef686ce7b6a6eb249197afca7/debugpy-1.5.1-cp39-cp39-win_amd64.whl
+decorator @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/5d/5c/84/5cc4430045ad08424f907a400ea96b8345cbfec6d87285e47a6c449740/decorator-5.1.1-py3-none-any.whl
+defusedxml @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/2b/69/07/7b13f7eaf3a4d7af737dcebe24d3d17b1c2a2f457fbddf746f5642bc43/defusedxml-0.7.1-py2.py3-none-any.whl
+distlib==0.3.4
+docutils @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/43/28/92/79000933ad30371dc938d9b368a9000e20ac0bb467a716c19ef1fbd3c7/docutils-0.17.1-py2.py3-none-any.whl
+dotty-dict @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/2a/51/17/4d2302ade80323cdc04dd726ec169711305cf95fb36a01d8473bc4be92/dotty_dict-1.3.0.tar.gz
+entrypoints @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/10/55/52/5c15951eb2f567987c8f2c73e28fb010e3ccff5644f2386605bfd48e97/entrypoints-0.4-py3-none-any.whl
+executing @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/8a/09/4c/27f71236639b93fc2cdee68e256ecdd92530ef4d9b2e13d39e4625b086/executing-0.8.2-py2.py3-none-any.whl
+extrucal==0.1.0
+filelock==3.6.0
+Flask==2.1.3
+Flask-Compress==1.12
+gitdb @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/90/22/b2/13e35fcefe45f6779d7507377070865acf263775bda5c08fff422c1a4d/gitdb-4.0.9-py3-none-any.whl
+GitPython @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/c0/0a/c6/d3f006e6bd78795a03581a408b47eed8e5839bd35849453d0b65c005d5/GitPython-3.1.27-py3-none-any.whl
+greenlet @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/96/8d/f7/671708c8a74421219834f29d18b91ea14778bac2a0eebb6a4ad52f068a/greenlet-1.1.2-cp39-cp39-win_amd64.whl
+gunicorn==20.1.0
+h11 @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b8/da/55/44ffe0c74acbcaf35e29031794ef40115a51cc80bf443005d45c5f58db/h11-0.13.0-py3-none-any.whl
+html5lib==1.1
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1642433548627/work
+imagesize @ file:///home/conda/feedstock_root/build_artifacts/imagesize_1636492669893/work
+importlib-metadata @ file:///D:/bld/importlib-metadata_1644934817850/work
+iniconfig @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/fa/b0/c6/10cfac68c9e6de9d2a1678366ca89fd9292b362c1760dbe758e41691cb/iniconfig-1.1.1-py2.py3-none-any.whl
+invoke @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/a6/91/6d/414821bde1ca707eed52db2a86744992bfa9208d0e6887ee7054139e58/invoke-1.6.0-py3-none-any.whl
+ipykernel @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/0e/22/ac/7a0a8d454030cc0535a83c416bd051e54c8723d4ade6f1878ed6999c2b/ipykernel-6.9.1-py3-none-any.whl
+ipython @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/e4/3d/21/4f79e9937300ebeaca8f6e0599a22770b299aa2f5508e0f1c1f7072421/ipython-8.0.1-py3-none-any.whl
+ipython-genutils @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b4/31/01/6f96480580d1674cab0b5e26dc9fca7bbdf7a2fd5811a7807a92436268/ipython_genutils-0.2.0-py2.py3-none-any.whl
+ipywidgets @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/fc/29/4b/f750c0f70ce7f9529dc7dcae670c7a69248e56cec4a62e16cdf4febd70/ipywidgets-7.6.5-py2.py3-none-any.whl
+itsdangerous==2.1.2
+jedi @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/c0/16/7b/b208472f00204d5aaeb0895fcde8e681c56c250bdf8d106fa76cdf7b30/jedi-0.18.1-py2.py3-none-any.whl
+Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1636510082894/work
+jsonschema @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/bf/c0/8a/7fc49d50ab46533d5342921d2a7c6ac9781c8ecabead9fca414a3facef/jsonschema-4.4.0-py3-none-any.whl
+jupyter @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/bb/e8/12/09df1332820a1126a780ab09cec78d2f50457f79bcd0cb2fbb07b19ef4/jupyter-1.0.0-py2.py3-none-any.whl
+jupyter-cache @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b7/1a/24/a3c54e242ae3b4c74c9d781d593c24dbfdf7f880f07214aa2c1c8196c7/jupyter_cache-0.4.3-py3-none-any.whl
+jupyter-client @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/71/da/6f/a8eb531842d3eb464690b2f16994861b1c4408acebfe3a097bfe3b0908/jupyter_client-7.1.2-py3-none-any.whl
+jupyter-console @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/4b/2f/b8/119f975fb811a5e911beacc7a1bb8f8e1154254fb33204e753131e7aca/jupyter_console-6.4.0-py3-none-any.whl
+jupyter-core @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/d3/a9/78/bd9a969bd610f65ab9ef9d573d77447298daec0c720e2632a3c738e4c2/jupyter_core-4.9.2-py3-none-any.whl
+jupyter-server @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/84/67/9a/05d6e1fb50e41a2e4b7558ada3cfadd694f4b0849bf4fb885f0506beaa/jupyter_server-1.13.5-py3-none-any.whl
+jupyter-server-mathjax @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/e5/c3/01/2115943c07f1b269fcb35085fe3d3a955b91cc834df48831a0135e1055/jupyter_server_mathjax-0.2.5-py3-none-any.whl
+jupyter-sphinx @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/27/e6/91/d669880947a36a728092a4013289698235f4a49830a7a0657f06161449/jupyter_sphinx-0.3.2-py3-none-any.whl
+jupyterlab-pygments @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/de/ef/fc/5883436de4b7865f082f7cba0e0e0ff5fbf229fe55d6e7d5431a6080f4/jupyterlab_pygments-0.1.2-py2.py3-none-any.whl
+jupyterlab-widgets @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b0/2b/0f/f7f65b7f0839db0577f58ba1135a0b2592c80c8c44cfe0feade7ffea95/jupyterlab_widgets-1.0.2-py3-none-any.whl
+keyring @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/8d/c7/11/6cec080d5b5e4019d69d8f77e3d3d70e7402d7ed091ba02d83241a7ba1/keyring-23.5.0-py3-none-any.whl
+lazy-object-proxy @ file:///D:/bld/lazy-object-proxy_1639599350324/work
+lockfile==0.12.2
+markdown-it-py @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/be/b4/d9/6321eeb7ae4984092aa8c991c35508f61dc94cb47357699536c3ec7393/markdown_it_py-1.1.0-py3-none-any.whl
+MarkupSafe @ file:///D:/bld/markupsafe_1645179597149/work
+matplotlib-inline @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b5/de/c6/6384d0999287fcdc9e88d38f7951106dcb7ffac7c4e8c0d0c665e12cac/matplotlib_inline-0.1.3-py3-none-any.whl
+mdit-py-plugins @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/8f/3a/69/a4bc8739e197e03ba3a582c830b8e829c493739fcd7440035f639b4997/mdit_py_plugins-0.2.8-py3-none-any.whl
+mistune @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/33/31/4c/2d69dc65d06d1c8f8b00b8e995e24bae97fce2e1f8ec5d8d2d98e852da/mistune-0.8.4-py2.py3-none-any.whl
+msgpack==1.0.3
+mypy-extensions @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/92/45/bf/1807ce854ff668d92602207a37bfa9316def2a3f257bd03c4c5be4bc9b/mypy_extensions-0.4.3-py2.py3-none-any.whl
+myst-nb @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/2c/9a/e2/b64784e344e1d711f1e23a50ce54eb4f6dfef6cecd000630c77fb6c8e1/myst_nb-0.13.2-py3-none-any.whl
+myst-parser @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/fa/70/19/603e28dbcec2a135cfa78467e1a745ea2abf3ff3946b8597f8c7e929cd/myst_parser-0.15.2-py3-none-any.whl
+nbclient @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/61/20/7b/73a90d85d6efe1d7592ea1f5d1659236d4620511b594f7d2623e3c1769/nbclient-0.5.11-py3-none-any.whl
+nbconvert @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/f7/96/f8/01cbcc821a94666e65ff514e3e51323ea149724b6f398e4cd9252a0700/nbconvert-6.4.2-py3-none-any.whl
+nbdime @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/1e/32/82/75eff408aba0f8f3b233ff02a8b7bab5d429c8cc32a0f0768e871700d2/nbdime-3.1.1-py2.py3-none-any.whl
+nbformat @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/36/a7/e7/e1a0c1c54f6151e23afd51bc71e3f6e0b24a96dd1e693b92dd9a4e4ab3/nbformat-5.1.3-py3-none-any.whl
+nest-asyncio @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b3/29/3c/b5aaddd006ebba37d2ae62d54ebf0e5a536b927e00b2e3a7b034b82e4a/nest_asyncio-1.5.4-py3-none-any.whl
+notebook @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/e0/b7/ae/02d3217cf585b301b032ba558b52034c08e86601ea870f6a3d784e1849/notebook-6.4.8-py3-none-any.whl
+numpy @ file:///D:/bld/numpy_1643959111320/work
+outcome @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/53/ca/17/951e46163cc13524d4d1604d8a3e8395cebbcbe4df8dbcd613833372fc/outcome-1.1.0-py2.py3-none-any.whl
+packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1637239678211/work
+pandas @ file:///D:/bld/pandas_1644670226603/work
+pandocfilters @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/31/93/b3/c3f289a2e857d460f34581e351cfe3ac509300d47c487f135c96e39349/pandocfilters-1.5.0-py2.py3-none-any.whl
+parso @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/4e/d3/c5/d91e200388f1ce44b74484eb39fbfd0797eb236741d3672a7d728668b2/parso-0.8.3-py2.py3-none-any.whl
+pastel==0.2.1
+pathspec @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/0a/67/21/620031f7f2938bad77b057a68a4c2a334542a7402a3214ed48690caf8c/pathspec-0.9.0-py2.py3-none-any.whl
+pickleshare @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b5/48/a1/d2b823337003d531d87cf0d503ef28bb579703a74d14ad24a88863d616/pickleshare-0.7.5-py2.py3-none-any.whl
+pkginfo==1.8.2
+platformdirs==2.5.1
+plotly==5.9.0
+pluggy @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/81/78/ca/13f743a3628faf5a0b7f021efb45f2193acba3a13663d498f6b34bf02e/pluggy-1.0.0-py2.py3-none-any.whl
+poetry==1.1.8
+poetry-core==1.0.4
+portpicker @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/f7/52/cb/7264e0b2273bbe577bd253d2d6e6ab038ba249cfc2072c62fe404cf45a/portpicker-1.5.0-py3-none-any.whl
+prometheus-client @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/24/31/09/f8932282bdc2f8000ef07f8f1ba87125d7162c538e705b8dc5a3a50852/prometheus_client-0.13.1-py3-none-any.whl
+prompt-toolkit @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/10/eb/01/0c438e83f168b89ab07bda4768ab09d84c4650eda85acaf3bdc78248ae/prompt_toolkit-3.0.28-py3-none-any.whl
+psutil @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/75/5d/3f/776114f69d9fcfbfa0c114345a09bd111f8fffa4e6204aa98fcbe1662e/psutil-5.9.0-cp39-cp39-win_amd64.whl
+pure-eval @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b4/e9/b2/1b0a1d953cf0bfaf71e297cb566c0b57ee2a8848baed30c261ef22fae7/pure_eval-0.2.2-py3-none-any.whl
+py @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b3/5c/47/ba5a596e01a2b61fa2daa6a438252483ad8c04e6c99e5dc22eaf8a489a/py-1.11.0-py2.py3-none-any.whl
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1636257122734/work
+Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1641580240686/work
+pylev==1.4.0
+pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1643496850550/work
+pyparsing @ file:///home/conda/feedstock_root/build_artifacts/pyparsing_1642753572664/work
+pyrsistent @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/a8/a0/90/feff5541a3ee6cc5dd96709e418499d1f6fe2f51327ae5580e54cbc1c3/pyrsistent-0.18.1-cp39-cp39-win_amd64.whl
+PySocks @ file:///D:/bld/pysocks_1635862562854/work
+pytest @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/36/8f/34/ee7b1e55b57e57c2908bbf6bc28864e3da51668f8758f841c60ded9ff3/pytest-7.0.1-py3-none-any.whl
+pytest-cov @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/50/df/c5/4bd35027c6247daac4ba547aff90d97ccdc7daf4aa62e110d69cfd39de/pytest_cov-3.0.0-py3-none-any.whl
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateutil_1626286286081/work
+python-gitlab @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/7d/78/ca/65e99f657ab1a17a81012f921debf659797178184869694bb2377e5acd/python_gitlab-2.10.1-py3-none-any.whl
+python-semantic-release @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/19/58/0e/29913246cc0a77d59a94000e1407107907276e4c18a2331d6e77175ea3/python_semantic_release-7.25.0-py3-none-any.whl
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1633452062248/work
+pywin32 @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/8c/7c/39/30e0583ef8d6be466a939641ebcd00a0d85aa77179d6547d7c15b5e12c/pywin32-303-cp39-cp39-win_amd64.whl
+pywin32-ctypes==0.2.0
+pywinpty @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/7a/a4/b6/b71e033ea9b49afb4e2cdaad9aacd579227d02dad7dbdd72706b011420/pywinpty-1.1.6-cp39-none-win_amd64.whl
+PyYAML @ file:///D:/bld/pyyaml_1636139914541/work
+pyzmq @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/0c/6c/9d/fa79018687a5dc633c05634f534a3a28db4edbc726479149aa0d930896/pyzmq-22.3.0-cp39-cp39-win_amd64.whl
+qtconsole @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/9d/da/16/5de771020aae699eb991b6cf8f59180f0a66496eb95e8e69006f4605c8/qtconsole-5.2.2-py3-none-any.whl
+QtPy @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/73/06/95/f458b1666022ee076d56061f27d5d6509705ce603a40894f6384d499f1/QtPy-2.0.1-py3-none-any.whl
+readme-renderer @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/8c/b1/3e/79fd0bddfd862b4346bcdc6794c4821ef10717953035e3e70dd897ba2a/readme_renderer-32.0-py3-none-any.whl
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1641580202195/work
+requests-toolbelt==0.9.1
+rfc3986 @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/29/b1/1a/3deca527f1d75a95e45234e848cdec1cd8cb232a56a9b86451cad82e7d/rfc3986-2.0.0-py2.py3-none-any.whl
+selenium @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/96/88/26/11fd8d4f4a5bf98a33468c88d91d12db3d055746e808452537c22078ab/selenium-4.1.0-py3-none-any.whl
+semver @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/ef/71/a9/1d9f75ab1d139ce3a51010fd1271a67cd80959fd6959e6295145f74f97/semver-2.13.0-py2.py3-none-any.whl
+Send2Trash @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/63/2c/10/d48818ab0722d2d6ac42f70c8b9b6567ff3a7936bdc06dedddda4398b8/Send2Trash-1.8.0-py3-none-any.whl
+setuptools-scm @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/77/9a/8d/534543c6675084093a64362f13ba114e7db5683008ef41272eec9d5976/setuptools_scm-6.4.2-py3-none-any.whl
+shellingham==1.4.0
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+smmap @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/76/3f/89/377e56f6e08e5b1fa88da762382b4c9c817c6dd24eae2e0e190898511d/smmap-5.0.0-py3-none-any.whl
+sniffio @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/d5/26/da/4c1b03b71c2d3fdf83bb7c73a0ddb8cf8071e4633d6d1193909c780cc2/sniffio-1.2.0-py3-none-any.whl
+snowballstemmer @ file:///home/conda/feedstock_root/build_artifacts/snowballstemmer_1637143057757/work
+sortedcontainers @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/b9/80/e1/4bdfa349488797fd308ecbe48f4fad57a3245777fb47c8741730583262/sortedcontainers-2.4.0-py2.py3-none-any.whl
+Sphinx @ file:///home/conda/feedstock_root/build_artifacts/sphinx_1642707669519/work
+sphinx-autoapi @ file:///home/conda/feedstock_root/build_artifacts/sphinx-autoapi_1633497134532/work
+sphinx-rtd-theme==1.0.0
+sphinx-togglebutton @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/fb/a0/a3/e6d99069ea733c4d099ef79f1b8d423c18b18c62f89f0fd8d9bde5b6f4/sphinx_togglebutton-0.3.0-py3-none-any.whl
+sphinxcontrib-applehelp @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/8d/eb/86/eec708bb3ff50c9780e78f36a9cb82cd9ff8030a90bd23b9a6f20aecca/sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl
+sphinxcontrib-devhelp @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/56/a5/74/11ccaa7737f06a10422027e0595b24d243af7a7a1dc4982dec22044c28/sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl
+sphinxcontrib-dotnetdomain==0.4
+sphinxcontrib-golangdomain==0.2.0.dev0
+sphinxcontrib-htmlhelp @ file:///home/conda/feedstock_root/build_artifacts/sphinxcontrib-htmlhelp_1621704829796/work
+sphinxcontrib-jsmath @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/d2/22/96/2076357e64b369910aa24a20d5b719beb24a1487146e4742476ee1e2d8/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
+sphinxcontrib-qthelp @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/32/fc/a9/112a82396d53ec629c1450253a6ded4d94d7ffffd63acd49879543ece9/sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl
+sphinxcontrib-serializinghtml @ file:///home/conda/feedstock_root/build_artifacts/sphinxcontrib-serializinghtml_1637000050264/work
+SQLAlchemy @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/ac/4c/40/cf8d7a74506ad9128600e170bbf988e122320c77b87c9354efde8c008f/SQLAlchemy-1.4.31-cp39-cp39-win_amd64.whl
+stack-data @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/8b/fe/a7/d09813a045f57169e0ee524ef3045a0f23d4d413e084119d812d3f1f74/stack_data-0.2.0-py3-none-any.whl
+tenacity==8.0.1
+terminado @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/2c/59/07/e246804789a3cfa38ac739def5675f89dcabf336461630569a23db2e0b/terminado-0.13.1-py3-none-any.whl
+testpath @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/1e/2d/08/76691a9e7e429930fb378dd96f760de96f2686841c47da2b35a04c5aad/testpath-0.5.0-py3-none-any.whl
+tomli @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/73/7c/d9/9f2752fc5b05f9176c6f3adc6484be1cec75a68925b8c5fe39d6493a07/tomli-2.0.1-py3-none-any.whl
+tomlkit @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/6a/39/2a/ebe41a1a0fb862057fa62ec18ed0ed5fa9c8867f707a1a1e3a4c235f46/tomlkit-0.7.0-py2.py3-none-any.whl
+toolz @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/14/14/07/68f3796f01e5cbd3a8bfa033f4eed3f040c5af27bb9cf8e80b8591c89d/toolz-0.11.2-py3-none-any.whl
+tornado @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/93/89/bc/122f0ef8f4cfcc7f39c7beaa599a43b82e5106b00b92cfd8aea518e972/tornado-6.1-cp39-cp39-win_amd64.whl
+tqdm @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/c1/d2/95/984649137d2c9fac6d0f7a883c2007c07e7bbac3b692cad1004d495455/tqdm-4.62.3-py2.py3-none-any.whl
+traitlets @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/ee/01/57/93229f3393af5b0814aff282450fcac279f4d7f32188b49db882ebf459/traitlets-5.1.1-py3-none-any.whl
+trio @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/a7/5e/39/27fd2dc5fb4f78feff8ae291677af63cd75a9d0db0f9c4f4f12689cf5f/trio-0.19.0-py3-none-any.whl
+trio-websocket @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/fa/9f/c4/7f077d945bf2a4a34205c5cfae57115fee0fa4b014e1d5971677b37e6c/trio_websocket-0.9.2-py3-none-any.whl
+twine @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/16/a5/3f/c694cd7b8d6f97b0c343be3c20d3c34a6bbfe61cd0037b99554fa97c73/twine-3.8.0-py3-none-any.whl
+typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1644850595256/work
+Unidecode @ file:///home/conda/feedstock_root/build_artifacts/unidecode_1645371071762/work
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1641584929973/work
+virtualenv==20.13.1
+wcwidth @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/7d/f4/60/0737157bb9711fec72c70dff523aa54491eef317e0d586cf5388ff0908/wcwidth-0.2.5-py2.py3-none-any.whl
+webencodings==0.5.1
+websocket-client @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/78/b8/b7/0fcd9e327923245528eafcea036968d84ac9df69fde63dec52b9bb6b30/websocket_client-1.2.3-py3-none-any.whl
+Werkzeug==2.1.2
+widgetsnbextension @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/1e/8c/72/6bea2521eb3293d1d676d0bd992472ac2749ffc9159df93c30cb550027/widgetsnbextension-3.5.2-py2.py3-none-any.whl
+win-inet-pton @ file:///D:/bld/win_inet_pton_1635832858406/work
+wrapt @ file:///D:/bld/wrapt_1635836536035/work
+wsproto @ file:///C:/Users/johnw/AppData/Local/pypoetry/Cache/artifacts/1d/a7/2d/130c91643f699e66be083d45b5bd85ecf1101cdfd5a1ac621097807818/wsproto-1.0.0-py3-none-any.whl
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1643828507773/work
