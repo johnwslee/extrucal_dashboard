@@ -240,7 +240,11 @@ app.layout = dbc.Container(
                                         html.Br(),
                                         html.Br(),
                                         html.H5('로드 외경 [mm]'),
-                                        dcc.Input(id='rod_outer_d', type='number', value=5),
+                                        dcc.Input(id='rod_outer_d', type='number', value=2),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5('다이 Hole 개수'),
+                                        dcc.Input(id='rod_n_holes', type='number', value=10),
                                         html.Br(),
                                         html.Br(),
                                         html.H5('자재 상온 밀도 [kg/mm^3]'),
@@ -524,6 +528,7 @@ def show_tube_table(
     Output('rod_plot', 'srcDoc'),
     Input('rod_outer_d', 'value'),
     Input('rod_s_density', 'value'),
+    Input('rod_n_holes', 'value'),
     Input('rod_density_ratio', 'value'),
     Input('rod_min_l_speed', 'value'),
     Input('rod_max_l_speed', 'value'),
@@ -534,11 +539,11 @@ def show_tube_table(
     Input('rod_depth_percent', 'value'),
 )
 def show_rod_plot(
-    outer_d, s_density, density_ratio, min_l_speed, max_l_speed, delta_l_speed, 
+    outer_d, s_density, n_holes, density_ratio, min_l_speed, max_l_speed, delta_l_speed, 
     min_size, max_size, delta_size, depth_percent
     ):
     output = rod_plot(
-        outer_d=outer_d, s_density=s_density, density_ratio=density_ratio, 
+        outer_d=outer_d, s_density=s_density, n_holes=n_holes, density_ratio=density_ratio, 
         min_l_speed=min_l_speed, max_l_speed=max_l_speed, delta_l_speed=delta_l_speed, min_size=min_size,
         max_size=max_size, delta_size=delta_size, depth_percent=depth_percent
         )
@@ -549,6 +554,7 @@ def show_rod_plot(
     Output('rod_table', 'srcDoc'),
     Input('rod_outer_d', 'value'),
     Input('rod_s_density', 'value'),
+    Input('rod_n_holes', 'value'),
     Input('rod_density_ratio', 'value'),
     Input('rod_min_l_speed', 'value'),
     Input('rod_max_l_speed', 'value'),
@@ -559,11 +565,11 @@ def show_rod_plot(
     Input('rod_depth_percent', 'value'),
 )
 def show_rod_table(
-    outer_d, s_density, density_ratio, min_l_speed, max_l_speed, delta_l_speed, 
+    outer_d, s_density, n_holes, density_ratio, min_l_speed, max_l_speed, delta_l_speed, 
     min_size, max_size, delta_size, depth_percent
     ):
     output = rod_table(
-        outer_d=outer_d, s_density=s_density, density_ratio=density_ratio, 
+        outer_d=outer_d, s_density=s_density, n_holes=n_holes, density_ratio=density_ratio, 
         min_l_speed=min_l_speed, max_l_speed=max_l_speed, delta_l_speed=delta_l_speed, min_size=min_size,
         max_size=max_size, delta_size=delta_size, depth_percent=depth_percent
         )
