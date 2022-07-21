@@ -7,5 +7,5 @@ numpy
 dash-bootstrap-components
 dash_bootstrap_templates
 gunicorn
-extrucal
+extrucal==1.4.12
 
