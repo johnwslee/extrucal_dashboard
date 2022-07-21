@@ -8,6 +8,7 @@ import dash_bootstrap_components as dbc
 
 # Setup app and layout/frontend
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 app.layout = dbc.Container(
     [
