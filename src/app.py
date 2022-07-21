@@ -48,7 +48,7 @@ app.layout = dbc.Container(
                                         html.H5('스크류 RPM 증가 단위'),
                                         dcc.Input(id='delta_rpm', type='number', value=5),
                                     ],
-                                    md=5
+                                    md=4
                                 ),
                                 dbc.Col(
                                     [
@@ -68,7 +68,7 @@ app.layout = dbc.Container(
                                             style={'border-width': '0', 'width': '100%', 'height': '100%'}
                                             ),
                                     ],
-                                    md=7
+                                    md=8
                                 )
                             ]
                         )
@@ -126,7 +126,7 @@ app.layout = dbc.Container(
                                         html.H5('압출기 사이즈 대비 미터링 채널 깊이 비율'),
                                         dcc.Input(id='cable_depth_percent', type='number', value=0.05),
                                     ],
-                                    md=5
+                                    md=4
                                 ),
                                 dbc.Col(
                                     [
@@ -146,7 +146,7 @@ app.layout = dbc.Container(
                                             style={'border-width': '0', 'width': '100%', 'height': '100%'}
                                             ),
                                     ],
-                                    md=7
+                                    md=8
                                 )
                             ]
                         )
@@ -204,7 +204,7 @@ app.layout = dbc.Container(
                                         html.H5('압출기 사이즈 대비 미터링 채널 깊이 비율'),
                                         dcc.Input(id='tube_depth_percent', type='number', value=0.05),
                                     ],
-                                    md=5
+                                    md=4
                                 ),
                                 dbc.Col(
                                     [
@@ -224,7 +224,7 @@ app.layout = dbc.Container(
                                             style={'border-width': '0', 'width': '100%', 'height': '100%'}
                                             ),
                                     ],
-                                    md=7
+                                    md=8
                                 )
                             ]
                         )
@@ -278,7 +278,7 @@ app.layout = dbc.Container(
                                         html.H5('압출기 사이즈 대비 미터링 채널 깊이 비율'),
                                         dcc.Input(id='rod_depth_percent', type='number', value=0.05),
                                     ],
-                                    md=5
+                                    md=4
                                 ),
                                 dbc.Col(
                                     [
@@ -298,7 +298,7 @@ app.layout = dbc.Container(
                                             style={'border-width': '0', 'width': '100%', 'height': '100%'}
                                             ),
                                     ],
-                                    md=7
+                                    md=8
                                 )
                             ]
                         )
@@ -356,7 +356,7 @@ app.layout = dbc.Container(
                                         html.H5('압출기 사이즈 대비 미터링 채널 깊이 비율'),
                                         dcc.Input(id='sheet_depth_percent', type='number', value=0.05),
                                     ],
-                                    md=5
+                                    md=4
                                 ),
                                 dbc.Col(
                                     [
@@ -376,7 +376,7 @@ app.layout = dbc.Container(
                                             style={'border-width': '0', 'width': '100%', 'height': '100%'}
                                             ),
                                     ],
-                                    md=7
+                                    md=8
                                 )
                             ]
                         )
