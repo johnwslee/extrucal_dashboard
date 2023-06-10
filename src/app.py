@@ -1,5 +1,6 @@
 import dash_bootstrap_components as dbc
-from dash import Dash, Input, Output, dcc, html, dash_table
+from dash import Dash, Input, Output, dash_table, dcc, html
+from pretty_html_table import build_table
 
 from extrucal.cable_extrusion import cable_cal, cable_plot, cable_table
 from extrucal.extrusion import throughput_cal, throughput_plot, throughput_table
@@ -7,50 +8,69 @@ from extrucal.rod_extrusion import rod_cal, rod_plot, rod_table
 from extrucal.sheet_extrusion import sheet_cal, sheet_plot, sheet_table
 from extrucal.tube_extrusion import tube_cal, tube_plot, tube_table
 
-from pretty_html_table import build_table
-
 # Styles
 
 h1_style = {
-    'background': 'white',
-    'text-transform': 'uppercase',
-    'textAlign': 'center',
-    'color': 'black',
-    'border': 'black',
-    'font-size': '50px',
-    'font-weight': 600,
-    'align-items': 'center',
-    'justify-content': 'center',
-    'border-radius': '4px',
-    'padding':'6px'
+    "background": "white",
+    "text-transform": "uppercase",
+    "textAlign": "center",
+    "color": "black",
+    "border": "black",
+    "font-size": "50px",
+    "font-weight": 600,
+    "align-items": "center",
+    "justify-content": "center",
+    "border-radius": "4px",
+    "padding": "6px",
+}
+
+h3_style = {
+    "background": "white",
+    "text-transform": "uppercase",
+    # 'textAlign': 'center',
+    "color": "#484848",
+    "border": "black",
+    "font-size": "30px",
+    "font-weight": 600,
+    # 'align-items': 'center',
+    # 'justify-content': 'center',
+    # 'border-radius': '4px',
+    # 'padding':'6px'
+}
+
+h5_style = {
+    # 'background': 'white',
+    "color": "grey",
+    "border": "black",
+    "font-weight": 600,
 }
 
 tab_style = {
-    'background': '#D3D3D3',
-    'text-transform': 'uppercase',
-    'color': 'white',
-    'border': 'white',
-    'font-size': '18px',
-    'font-weight': 600,
-    'align-items': 'center',
-    'justify-content': 'center',
-    'border-radius': '4px',
-    'padding':'6px'
+    "background": "#D3D3D3",
+    "text-transform": "uppercase",
+    "color": "white",
+    "border": "white",
+    "font-size": "18px",
+    "font-weight": 600,
+    "align-items": "center",
+    "justify-content": "center",
+    "border-radius": "4px",
+    "padding": "6px",
 }
 
 tab_selected_style = {
-    'background': '#484848',
-    'text-transform': 'uppercase',
-    'color': 'white',
-    'font-size': '18px',
-    'font-weight': 600,
-    'align-items': 'center',
-    'justify-content': 'center',
-    'border-radius': '4px',
-    'padding':'6px'
+    "background": "#484848",
+    "text-transform": "uppercase",
+    "color": "white",
+    "font-size": "18px",
+    "font-weight": 600,
+    "align-items": "center",
+    "justify-content": "center",
+    "border-radius": "4px",
+    "padding": "6px",
 }
 
-
+left_column_style = {"width": "30%", "background-color": "#F0F0F0"}
 
 # Setup app and layout/frontend
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -72,53 +92,81 @@ app.layout = dbc.Container(
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H5("Screw Size [mm]"),
+                                        html.H5("Screw Size [mm]", style=h5_style),
                                         dcc.Input(
-                                            id="screw_size", type="number", value=200, debounce=True
+                                            id="screw_size",
+                                            type="number",
+                                            value=200,
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H5("Melt Density of Material [kg/m^3]"),
+                                        html.H5(
+                                            "Melt Density of Material [kg/m^3]",
+                                            style=h5_style,
+                                        ),
                                         dcc.Input(
-                                            id="melt_density", type="number", value=800, debounce=True
+                                            id="melt_density",
+                                            type="number",
+                                            value=800,
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H5("Number of Screw Flight"),
+                                        html.H5(
+                                            "Number of Screw Flight", style=h5_style
+                                        ),
                                         dcc.Input(
-                                            id="n_flight", type="number", value=1, debounce=True
+                                            id="n_flight",
+                                            type="number",
+                                            value=1,
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H5("Minimum Screw RPM"),
-                                        dcc.Input(id="min_rpm", type="number", value=5, debounce=True),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Maximum Screw RPM"),
+                                        html.H5("Minimum Screw RPM", style=h5_style),
                                         dcc.Input(
-                                            id="max_rpm", type="number", value=50, debounce=True
+                                            id="min_rpm",
+                                            type="number",
+                                            value=5,
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H5("Increment of Screw RPM"),
+                                        html.H5("Maximum Screw RPM", style=h5_style),
                                         dcc.Input(
-                                            id="delta_rpm", type="number", value=5, debounce=True
+                                            id="max_rpm",
+                                            type="number",
+                                            value=50,
+                                            debounce=True,
                                         ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Increment of Screw RPM", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="delta_rpm",
+                                            type="number",
+                                            value=5,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
                                     ],
+                                    style=left_column_style,
                                     md=4,
                                 ),
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H3("Predicted Throughput [kg/hr]"),
+                                        html.H3("Predicted Throughput", style=h3_style),
                                         html.Iframe(
                                             id="throughput_plot",
                                             style={
                                                 "border-width": "0",
                                                 "width": "100%",
-                                                "height": "85%",
+                                                "height": "76%",
                                             },
                                         ),
                                         html.H6(
@@ -126,7 +174,7 @@ app.layout = dbc.Container(
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H3("Throughput Table"),
+                                        html.H3("Throughput Table", style=h3_style),
                                         html.Iframe(
                                             id="throughput_table",
                                             style={
@@ -152,107 +200,140 @@ app.layout = dbc.Container(
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H5("Insulation Outer Diameter [mm]"),
-                                        dcc.Input(
-                                            id="cable_outer_d", type="number", value=10, debounce=True
+                                        html.H5(
+                                            "Insulation Outer Diameter [mm]",
+                                            style=h5_style,
                                         ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Insulation Thickness [mm]"),
                                         dcc.Input(
-                                            id="cable_thickness", type="number", value=2, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Solid Density of Material [kg/mm^3]"),
-                                        dcc.Input(
-                                            id="cable_s_density",
-                                            type="number",
-                                            value=920,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Melt/Solid Density Ratio"),
-                                        dcc.Input(
-                                            id="cable_density_ratio",
-                                            type="number",
-                                            value=0.85,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Minimum Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="cable_min_l_speed",
-                                            type="number",
-                                            value=1,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Maximum Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="cable_max_l_speed",
+                                            id="cable_outer_d",
                                             type="number",
                                             value=10,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Increment of Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="cable_delta_l_speed",
-                                            type="number",
-                                            value=1,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Minimum Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="cable_min_size", type="number", value=40, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Maximum Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="cable_max_size",
-                                            type="number",
-                                            value=100,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Increment of Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="cable_delta_size",
-                                            type="number",
-                                            value=5,
-                                            debounce=True
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5(
-                                            "Metering Depth to Extruder Size Ratio"
+                                            "Insulation Thickness [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="cable_thickness",
+                                            type="number",
+                                            value=2,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Solid Density of Material [kg/m^3]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="cable_s_density",
+                                            type="number",
+                                            value=920,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Melt/Solid Density Ratio", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="cable_density_ratio",
+                                            type="number",
+                                            value=0.85,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Minimum Line Speed [mpm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="cable_min_l_speed",
+                                            type="number",
+                                            value=1,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Maximum Line Speed [mpm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="cable_max_l_speed",
+                                            type="number",
+                                            value=10,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Increment of Line Speed [mpm]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="cable_delta_l_speed",
+                                            type="number",
+                                            value=1,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Minimum Extruder Size [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="cable_min_size",
+                                            type="number",
+                                            value=40,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Maximum Extruder Size [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="cable_max_size",
+                                            type="number",
+                                            value=100,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Increment of Extruder Size [mm]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="cable_delta_size",
+                                            type="number",
+                                            value=5,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Metering Depth to Extruder Size Ratio",
+                                            style=h5_style,
                                         ),
                                         dcc.Input(
                                             id="cable_depth_percent",
                                             type="number",
                                             value=0.05,
-                                            debounce=True
+                                            debounce=True,
                                         ),
+                                        html.Br(),
+                                        html.Br(),
                                     ],
                                     md=4,
+                                    style=left_column_style,
                                 ),
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H3(
-                                            "Screw RPM w.r.t. Extruder Size & Line Speed"
-                                        ),
+                                        html.H3("Required Screw RPM", style=h3_style),
                                         html.Iframe(
                                             id="cable_plot",
                                             style={
@@ -266,7 +347,7 @@ app.layout = dbc.Container(
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H3("Screw RPM Table"),
+                                        html.H3("Screw RPM Table", style=h3_style),
                                         html.Iframe(
                                             id="cable_table",
                                             style={
@@ -292,101 +373,139 @@ app.layout = dbc.Container(
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H5("Tube Outer Diameter [mm]"),
-                                        dcc.Input(
-                                            id="tube_outer_d", type="number", value=10, debounce=True
+                                        html.H5(
+                                            "Tube Outer Diameter [mm]", style=h5_style
                                         ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Tube Inner Diameter [mm]"),
                                         dcc.Input(
-                                            id="tube_inner_d", type="number", value=8, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Solid Density of Material [kg/mm^3]"),
-                                        dcc.Input(
-                                            id="tube_s_density",
-                                            type="number",
-                                            value=920,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Melt/Solid Density Ratio"),
-                                        dcc.Input(
-                                            id="tube_density_ratio",
-                                            type="number",
-                                            value=0.85,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Minimum Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="tube_min_l_speed",
-                                            type="number",
-                                            value=1,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Maximum Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="tube_max_l_speed",
+                                            id="tube_outer_d",
                                             type="number",
                                             value=10,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Increment of Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="tube_delta_l_speed",
-                                            type="number",
-                                            value=1,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Minimum Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="tube_min_size", type="number", value=40, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Maximum Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="tube_max_size", type="number", value=100, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Increment of Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="tube_delta_size", type="number", value=5, debounce=True
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5(
-                                            "Metering Depth to Extruder Size Ratio"
+                                            "Tube Inner Diameter [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="tube_inner_d",
+                                            type="number",
+                                            value=8,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Solid Density of Material [kg/m^3]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="tube_s_density",
+                                            type="number",
+                                            value=920,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Melt/Solid Density Ratio", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="tube_density_ratio",
+                                            type="number",
+                                            value=0.85,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Minimum Line Speed [mpm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="tube_min_l_speed",
+                                            type="number",
+                                            value=1,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Maximum Line Speed [mpm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="tube_max_l_speed",
+                                            type="number",
+                                            value=10,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Increment of Line Speed [mpm]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="tube_delta_l_speed",
+                                            type="number",
+                                            value=1,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Minimum Extruder Size [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="tube_min_size",
+                                            type="number",
+                                            value=40,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Maximum Extruder Size [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="tube_max_size",
+                                            type="number",
+                                            value=100,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Increment of Extruder Size [mm]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="tube_delta_size",
+                                            type="number",
+                                            value=5,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Metering Depth to Extruder Size Ratio",
+                                            style=h5_style,
                                         ),
                                         dcc.Input(
                                             id="tube_depth_percent",
                                             type="number",
                                             value=0.05,
-                                            debounce=True
+                                            debounce=True,
                                         ),
+                                        html.Br(),
+                                        html.Br(),
                                     ],
                                     md=4,
+                                    style=left_column_style,
                                 ),
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H3(
-                                            "Screw RPM w.r.t. Extruder Size & Line Speed"
-                                        ),
+                                        html.H3("Required Screw RPM", style=h3_style),
                                         html.Iframe(
                                             id="tube_plot",
                                             style={
@@ -400,7 +519,7 @@ app.layout = dbc.Container(
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H3("Screw RPM Table"),
+                                        html.H3("Screw RPM Table", style=h3_style),
                                         html.Iframe(
                                             id="tube_table",
                                             style={
@@ -426,95 +545,137 @@ app.layout = dbc.Container(
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H5("Rod Outer Diameter [mm]"),
-                                        dcc.Input(
-                                            id="rod_outer_d", type="number", value=2, debounce=True
+                                        html.H5(
+                                            "Rod Outer Diameter [mm]", style=h5_style
                                         ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Number of Die Holes"),
                                         dcc.Input(
-                                            id="rod_n_holes", type="number", value=10, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Solid Density of Material [kg/mm^3]"),
-                                        dcc.Input(
-                                            id="rod_s_density", type="number", value=920, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Melt/Solid Density Ratio"),
-                                        dcc.Input(
-                                            id="rod_density_ratio",
+                                            id="rod_outer_d",
                                             type="number",
-                                            value=0.85,
-                                            debounce=True
+                                            value=2,
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H5("Minimum Line Speed [mpm]"),
+                                        html.H5("Number of Die Holes", style=h5_style),
                                         dcc.Input(
-                                            id="rod_min_l_speed", type="number", value=1, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Maximum Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="rod_max_l_speed",
+                                            id="rod_n_holes",
                                             type="number",
                                             value=10,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Increment of Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="rod_delta_l_speed",
-                                            type="number",
-                                            value=1,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Minimum Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="rod_min_size", type="number", value=40, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Maximum Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="rod_max_size", type="number", value=100, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Increment of Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="rod_delta_size", type="number", value=5, debounce=True
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5(
-                                            "Metering Depth to Extruder Size Ratio"
+                                            "Solid Density of Material [kg/m^3]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="rod_s_density",
+                                            type="number",
+                                            value=920,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Melt/Solid Density Ratio", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="rod_density_ratio",
+                                            type="number",
+                                            value=0.85,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Minimum Line Speed [mpm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="rod_min_l_speed",
+                                            type="number",
+                                            value=1,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Maximum Line Speed [mpm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="rod_max_l_speed",
+                                            type="number",
+                                            value=10,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Increment of Line Speed [mpm]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="rod_delta_l_speed",
+                                            type="number",
+                                            value=1,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Minimum Extruder Size [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="rod_min_size",
+                                            type="number",
+                                            value=40,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Maximum Extruder Size [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="rod_max_size",
+                                            type="number",
+                                            value=100,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Increment of Extruder Size [mm]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="rod_delta_size",
+                                            type="number",
+                                            value=5,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Metering Depth to Extruder Size Ratio",
+                                            style=h5_style,
                                         ),
                                         dcc.Input(
                                             id="rod_depth_percent",
                                             type="number",
                                             value=0.05,
-                                            debounce=True
+                                            debounce=True,
                                         ),
+                                        html.Br(),
+                                        html.Br(),
                                     ],
                                     md=4,
+                                    style=left_column_style,
                                 ),
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H3(
-                                            "Screw RPM w.r.t. Extruder Size & Line Speed"
-                                        ),
+                                        html.H3("Required Screw RPM", style=h3_style),
                                         html.Iframe(
                                             id="rod_plot",
                                             style={
@@ -528,7 +689,7 @@ app.layout = dbc.Container(
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H3("Screw RPM Table"),
+                                        html.H3("Screw RPM Table", style=h3_style),
                                         html.Iframe(
                                             id="rod_table",
                                             style={
@@ -554,107 +715,135 @@ app.layout = dbc.Container(
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H5("Sheet Width [mm]"),
+                                        html.H5("Sheet Width [mm]", style=h5_style),
                                         dcc.Input(
-                                            id="sheet_width", type="number", value=20, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Sheet Thickness [mm]"),
-                                        dcc.Input(
-                                            id="sheet_thickness", type="number", value=2, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Solid Density of Material [kg/mm^3]"),
-                                        dcc.Input(
-                                            id="sheet_s_density",
+                                            id="sheet_width",
                                             type="number",
-                                            value=920,
-                                            debounce=True
+                                            value=20,
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H5("Melt/Solid Density Ratio"),
+                                        html.H5("Sheet Thickness [mm]", style=h5_style),
                                         dcc.Input(
-                                            id="sheet_density_ratio",
+                                            id="sheet_thickness",
                                             type="number",
-                                            value=0.85,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Minimum Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="sheet_min_l_speed",
-                                            type="number",
-                                            value=1,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Maximum Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="sheet_max_l_speed",
-                                            type="number",
-                                            value=10,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Increment of Line Speed [mpm]"),
-                                        dcc.Input(
-                                            id="sheet_delta_l_speed",
-                                            type="number",
-                                            value=1,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Minimum Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="sheet_min_size", type="number", value=40, debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Maximum Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="sheet_max_size",
-                                            type="number",
-                                            value=100,
-                                            debounce=True
-                                        ),
-                                        html.Br(),
-                                        html.Br(),
-                                        html.H5("Increment of Extruder Size [mm]"),
-                                        dcc.Input(
-                                            id="sheet_delta_size",
-                                            type="number",
-                                            value=5,
-                                            debounce=True
+                                            value=2,
+                                            debounce=True,
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5(
-                                            "Metering Depth to Extruder Size Ratio"
+                                            "Solid Density of Material [kg/m^3]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="sheet_s_density",
+                                            type="number",
+                                            value=920,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Melt/Solid Density Ratio", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="sheet_density_ratio",
+                                            type="number",
+                                            value=0.85,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Minimum Line Speed [mpm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="sheet_min_l_speed",
+                                            type="number",
+                                            value=1,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Maximum Line Speed [mpm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="sheet_max_l_speed",
+                                            type="number",
+                                            value=10,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Increment of Line Speed [mpm]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="sheet_delta_l_speed",
+                                            type="number",
+                                            value=1,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Minimum Extruder Size [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="sheet_min_size",
+                                            type="number",
+                                            value=40,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Maximum Extruder Size [mm]", style=h5_style
+                                        ),
+                                        dcc.Input(
+                                            id="sheet_max_size",
+                                            type="number",
+                                            value=100,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Increment of Extruder Size [mm]",
+                                            style=h5_style,
+                                        ),
+                                        dcc.Input(
+                                            id="sheet_delta_size",
+                                            type="number",
+                                            value=5,
+                                            debounce=True,
+                                        ),
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            "Metering Depth to Extruder Size Ratio",
+                                            style=h5_style,
                                         ),
                                         dcc.Input(
                                             id="sheet_depth_percent",
                                             type="number",
                                             value=0.05,
-                                            debounce=True
+                                            debounce=True,
                                         ),
+                                        html.Br(),
+                                        html.Br(),
                                     ],
                                     md=4,
+                                    style=left_column_style,
                                 ),
                                 dbc.Col(
                                     [
                                         html.Br(),
-                                        html.Br(),
-                                        html.H3(
-                                            "Screw RPM w.r.t. Extruder Size & Line Speed"
-                                        ),
+                                        html.H3("Required Screw RPM", style=h3_style),
                                         html.Iframe(
                                             id="sheet_plot",
                                             style={
@@ -668,7 +857,7 @@ app.layout = dbc.Container(
                                         ),
                                         html.Br(),
                                         html.Br(),
-                                        html.H3("Screw RPM Table"),
+                                        html.H3("Screw RPM Table", style=h3_style),
                                         html.Iframe(
                                             id="sheet_table",
                                             style={
@@ -735,8 +924,14 @@ def show_throughput_table(
         max_rpm=max_rpm,
         delta_rpm=delta_rpm,
     )
-    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
-                       padding="5px")
+    return build_table(
+        output,
+        "grey_light",
+        font_size="16px",
+        index=True,
+        text_align="center",
+        padding="5px",
+    )
 
 
 # Setup callbacks/backend for Cable Plot
@@ -824,8 +1019,14 @@ def show_cable_table(
         delta_size=delta_size,
         depth_percent=depth_percent,
     )
-    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
-                       padding="5px")
+    return build_table(
+        output,
+        "grey_light",
+        font_size="16px",
+        index=True,
+        text_align="center",
+        padding="5px",
+    )
 
 
 # Setup callbacks/backend for Tube Plot
@@ -913,8 +1114,14 @@ def show_tube_table(
         delta_size=delta_size,
         depth_percent=depth_percent,
     )
-    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
-                       padding="5px")
+    return build_table(
+        output,
+        "grey_light",
+        font_size="16px",
+        index=True,
+        text_align="center",
+        padding="5px",
+    )
 
 
 # Setup callbacks/backend for Rod Plot
@@ -1002,8 +1209,14 @@ def show_rod_table(
         delta_size=delta_size,
         depth_percent=depth_percent,
     )
-    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
-                       padding="5px")
+    return build_table(
+        output,
+        "grey_light",
+        font_size="16px",
+        index=True,
+        text_align="center",
+        padding="5px",
+    )
 
 
 # Setup callbacks/backend for Sheet Plot
@@ -1091,8 +1304,14 @@ def show_sheet_table(
         delta_size=delta_size,
         depth_percent=depth_percent,
     )
-    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
-                       padding="5px")
+    return build_table(
+        output,
+        "grey_light",
+        font_size="16px",
+        index=True,
+        text_align="center",
+        padding="5px",
+    )
 
 
 if __name__ == "__main__":
