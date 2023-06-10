@@ -1,5 +1,5 @@
 import dash_bootstrap_components as dbc
-from dash import Dash, Input, Output, dcc, html
+from dash import Dash, Input, Output, dcc, html, dash_table
 
 from extrucal.cable_extrusion import cable_cal, cable_plot, cable_table
 from extrucal.extrusion import throughput_cal, throughput_plot, throughput_table
@@ -7,6 +7,7 @@ from extrucal.rod_extrusion import rod_cal, rod_plot, rod_table
 from extrucal.sheet_extrusion import sheet_cal, sheet_plot, sheet_table
 from extrucal.tube_extrusion import tube_cal, tube_plot, tube_table
 
+from pretty_html_table import build_table
 
 # Styles
 
@@ -734,7 +735,8 @@ def show_throughput_table(
         max_rpm=max_rpm,
         delta_rpm=delta_rpm,
     )
-    return output.to_html()
+    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
+                       padding="5px")
 
 
 # Setup callbacks/backend for Cable Plot
@@ -822,7 +824,8 @@ def show_cable_table(
         delta_size=delta_size,
         depth_percent=depth_percent,
     )
-    return output.to_html()
+    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
+                       padding="5px")
 
 
 # Setup callbacks/backend for Tube Plot
@@ -910,7 +913,8 @@ def show_tube_table(
         delta_size=delta_size,
         depth_percent=depth_percent,
     )
-    return output.to_html()
+    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
+                       padding="5px")
 
 
 # Setup callbacks/backend for Rod Plot
@@ -998,7 +1002,8 @@ def show_rod_table(
         delta_size=delta_size,
         depth_percent=depth_percent,
     )
-    return output.to_html()
+    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
+                       padding="5px")
 
 
 # Setup callbacks/backend for Sheet Plot
@@ -1086,7 +1091,8 @@ def show_sheet_table(
         delta_size=delta_size,
         depth_percent=depth_percent,
     )
-    return output.to_html()
+    return build_table(output, 'grey_light', font_size='16px', index=True, text_align='center', 
+                       padding="5px")
 
 
 if __name__ == "__main__":
