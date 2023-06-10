@@ -8,10 +8,24 @@ from extrucal.sheet_extrusion import sheet_cal, sheet_plot, sheet_table
 from extrucal.tube_extrusion import tube_cal, tube_plot, tube_table
 
 
-# Style for tabs
+# Styles
+
+h1_style = {
+    'background': 'white',
+    'text-transform': 'uppercase',
+    'textAlign': 'center',
+    'color': 'black',
+    'border': 'black',
+    'font-size': '50px',
+    'font-weight': 600,
+    'align-items': 'center',
+    'justify-content': 'center',
+    'border-radius': '4px',
+    'padding':'6px'
+}
 
 tab_style = {
-    "background": "grey",
+    'background': '#D3D3D3',
     'text-transform': 'uppercase',
     'color': 'white',
     'border': 'white',
@@ -24,7 +38,7 @@ tab_style = {
 }
 
 tab_selected_style = {
-    "background": "black",
+    'background': '#484848',
     'text-transform': 'uppercase',
     'color': 'white',
     'font-size': '18px',
@@ -43,7 +57,7 @@ server = app.server
 
 app.layout = dbc.Container(
     [
-        html.H1("Extrucal Dashboard", style={"textAlign": "center"}),
+        html.H1("Extrucal Dashboard", style=h1_style),
         html.Br(),
         dcc.Tabs(
             [
@@ -60,35 +74,35 @@ app.layout = dbc.Container(
                                         html.Br(),
                                         html.H5("Screw Size [mm]"),
                                         dcc.Input(
-                                            id="screw_size", type="number", value=200
+                                            id="screw_size", type="number", value=200, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Melt Density of Material [kg/m^3]"),
                                         dcc.Input(
-                                            id="melt_density", type="number", value=800
+                                            id="melt_density", type="number", value=800, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Number of Screw Flight"),
                                         dcc.Input(
-                                            id="n_flight", type="number", value=1
+                                            id="n_flight", type="number", value=1, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Minimum Screw RPM"),
-                                        dcc.Input(id="min_rpm", type="number", value=5),
+                                        dcc.Input(id="min_rpm", type="number", value=5, debounce=True),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Maximum Screw RPM"),
                                         dcc.Input(
-                                            id="max_rpm", type="number", value=50
+                                            id="max_rpm", type="number", value=50, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Increment of Screw RPM"),
                                         dcc.Input(
-                                            id="delta_rpm", type="number", value=5
+                                            id="delta_rpm", type="number", value=5, debounce=True
                                         ),
                                     ],
                                     md=4,
@@ -128,7 +142,7 @@ app.layout = dbc.Container(
                     ],
                 ),
                 dcc.Tab(
-                    label="Calculation for Cable Extrusion",
+                    label="Cable Extrusion",
                     style=tab_style,
                     selected_style=tab_selected_style,
                     children=[
@@ -140,13 +154,13 @@ app.layout = dbc.Container(
                                         html.Br(),
                                         html.H5("Insulation Outer Diameter [mm]"),
                                         dcc.Input(
-                                            id="cable_outer_d", type="number", value=10
+                                            id="cable_outer_d", type="number", value=10, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Insulation Thickness [mm]"),
                                         dcc.Input(
-                                            id="cable_thickness", type="number", value=2
+                                            id="cable_thickness", type="number", value=2, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -155,6 +169,7 @@ app.layout = dbc.Container(
                                             id="cable_s_density",
                                             type="number",
                                             value=920,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -163,6 +178,7 @@ app.layout = dbc.Container(
                                             id="cable_density_ratio",
                                             type="number",
                                             value=0.85,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -171,6 +187,7 @@ app.layout = dbc.Container(
                                             id="cable_min_l_speed",
                                             type="number",
                                             value=1,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -179,6 +196,7 @@ app.layout = dbc.Container(
                                             id="cable_max_l_speed",
                                             type="number",
                                             value=10,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -187,12 +205,13 @@ app.layout = dbc.Container(
                                             id="cable_delta_l_speed",
                                             type="number",
                                             value=1,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Minimum Extruder Size [mm]"),
                                         dcc.Input(
-                                            id="cable_min_size", type="number", value=40
+                                            id="cable_min_size", type="number", value=40, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -201,6 +220,7 @@ app.layout = dbc.Container(
                                             id="cable_max_size",
                                             type="number",
                                             value=100,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -209,6 +229,7 @@ app.layout = dbc.Container(
                                             id="cable_delta_size",
                                             type="number",
                                             value=5,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -219,6 +240,7 @@ app.layout = dbc.Container(
                                             id="cable_depth_percent",
                                             type="number",
                                             value=0.05,
+                                            debounce=True
                                         ),
                                     ],
                                     md=4,
@@ -260,7 +282,7 @@ app.layout = dbc.Container(
                     ],
                 ),
                 dcc.Tab(
-                    label="Calculation for Tube Extrusion",
+                    label="Tube Extrusion",
                     style=tab_style,
                     selected_style=tab_selected_style,
                     children=[
@@ -272,13 +294,13 @@ app.layout = dbc.Container(
                                         html.Br(),
                                         html.H5("Tube Outer Diameter [mm]"),
                                         dcc.Input(
-                                            id="tube_outer_d", type="number", value=10
+                                            id="tube_outer_d", type="number", value=10, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Tube Inner Diameter [mm]"),
                                         dcc.Input(
-                                            id="tube_inner_d", type="number", value=8
+                                            id="tube_inner_d", type="number", value=8, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -287,6 +309,7 @@ app.layout = dbc.Container(
                                             id="tube_s_density",
                                             type="number",
                                             value=920,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -295,6 +318,7 @@ app.layout = dbc.Container(
                                             id="tube_density_ratio",
                                             type="number",
                                             value=0.85,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -303,6 +327,7 @@ app.layout = dbc.Container(
                                             id="tube_min_l_speed",
                                             type="number",
                                             value=1,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -311,6 +336,7 @@ app.layout = dbc.Container(
                                             id="tube_max_l_speed",
                                             type="number",
                                             value=10,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -319,24 +345,25 @@ app.layout = dbc.Container(
                                             id="tube_delta_l_speed",
                                             type="number",
                                             value=1,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Minimum Extruder Size [mm]"),
                                         dcc.Input(
-                                            id="tube_min_size", type="number", value=40
+                                            id="tube_min_size", type="number", value=40, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Maximum Extruder Size [mm]"),
                                         dcc.Input(
-                                            id="tube_max_size", type="number", value=100
+                                            id="tube_max_size", type="number", value=100, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Increment of Extruder Size [mm]"),
                                         dcc.Input(
-                                            id="tube_delta_size", type="number", value=5
+                                            id="tube_delta_size", type="number", value=5, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -347,6 +374,7 @@ app.layout = dbc.Container(
                                             id="tube_depth_percent",
                                             type="number",
                                             value=0.05,
+                                            debounce=True
                                         ),
                                     ],
                                     md=4,
@@ -388,7 +416,7 @@ app.layout = dbc.Container(
                     ],
                 ),
                 dcc.Tab(
-                    label="Calculation for Rod Extrusion",
+                    label="Rod Extrusion",
                     style=tab_style,
                     selected_style=tab_selected_style,
                     children=[
@@ -400,19 +428,19 @@ app.layout = dbc.Container(
                                         html.Br(),
                                         html.H5("Rod Outer Diameter [mm]"),
                                         dcc.Input(
-                                            id="rod_outer_d", type="number", value=2
+                                            id="rod_outer_d", type="number", value=2, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Number of Die Holes"),
                                         dcc.Input(
-                                            id="rod_n_holes", type="number", value=10
+                                            id="rod_n_holes", type="number", value=10, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Solid Density of Material [kg/mm^3]"),
                                         dcc.Input(
-                                            id="rod_s_density", type="number", value=920
+                                            id="rod_s_density", type="number", value=920, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -421,12 +449,13 @@ app.layout = dbc.Container(
                                             id="rod_density_ratio",
                                             type="number",
                                             value=0.85,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Minimum Line Speed [mpm]"),
                                         dcc.Input(
-                                            id="rod_min_l_speed", type="number", value=1
+                                            id="rod_min_l_speed", type="number", value=1, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -435,6 +464,7 @@ app.layout = dbc.Container(
                                             id="rod_max_l_speed",
                                             type="number",
                                             value=10,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -443,24 +473,25 @@ app.layout = dbc.Container(
                                             id="rod_delta_l_speed",
                                             type="number",
                                             value=1,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Minimum Extruder Size [mm]"),
                                         dcc.Input(
-                                            id="rod_min_size", type="number", value=40
+                                            id="rod_min_size", type="number", value=40, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Maximum Extruder Size [mm]"),
                                         dcc.Input(
-                                            id="rod_max_size", type="number", value=100
+                                            id="rod_max_size", type="number", value=100, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Increment of Extruder Size [mm]"),
                                         dcc.Input(
-                                            id="rod_delta_size", type="number", value=5
+                                            id="rod_delta_size", type="number", value=5, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -471,6 +502,7 @@ app.layout = dbc.Container(
                                             id="rod_depth_percent",
                                             type="number",
                                             value=0.05,
+                                            debounce=True
                                         ),
                                     ],
                                     md=4,
@@ -512,7 +544,7 @@ app.layout = dbc.Container(
                     ],
                 ),
                 dcc.Tab(
-                    label="Calculation for Sheet Extrusion",
+                    label="Sheet Extrusion",
                     style=tab_style,
                     selected_style=tab_selected_style,
                     children=[
@@ -524,13 +556,13 @@ app.layout = dbc.Container(
                                         html.Br(),
                                         html.H5("Sheet Width [mm]"),
                                         dcc.Input(
-                                            id="sheet_width", type="number", value=20
+                                            id="sheet_width", type="number", value=20, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Sheet Thickness [mm]"),
                                         dcc.Input(
-                                            id="sheet_thickness", type="number", value=2
+                                            id="sheet_thickness", type="number", value=2, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -539,6 +571,7 @@ app.layout = dbc.Container(
                                             id="sheet_s_density",
                                             type="number",
                                             value=920,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -547,6 +580,7 @@ app.layout = dbc.Container(
                                             id="sheet_density_ratio",
                                             type="number",
                                             value=0.85,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -555,6 +589,7 @@ app.layout = dbc.Container(
                                             id="sheet_min_l_speed",
                                             type="number",
                                             value=1,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -563,6 +598,7 @@ app.layout = dbc.Container(
                                             id="sheet_max_l_speed",
                                             type="number",
                                             value=10,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -571,12 +607,13 @@ app.layout = dbc.Container(
                                             id="sheet_delta_l_speed",
                                             type="number",
                                             value=1,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
                                         html.H5("Minimum Extruder Size [mm]"),
                                         dcc.Input(
-                                            id="sheet_min_size", type="number", value=40
+                                            id="sheet_min_size", type="number", value=40, debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -585,6 +622,7 @@ app.layout = dbc.Container(
                                             id="sheet_max_size",
                                             type="number",
                                             value=100,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -593,6 +631,7 @@ app.layout = dbc.Container(
                                             id="sheet_delta_size",
                                             type="number",
                                             value=5,
+                                            debounce=True
                                         ),
                                         html.Br(),
                                         html.Br(),
@@ -603,6 +642,7 @@ app.layout = dbc.Container(
                                             id="sheet_depth_percent",
                                             type="number",
                                             value=0.05,
+                                            debounce=True
                                         ),
                                     ],
                                     md=4,
