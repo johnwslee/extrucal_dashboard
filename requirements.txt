@@ -8,4 +8,4 @@ dash-bootstrap-components
 dash_bootstrap_templates
 gunicorn
 extrucal==1.4.12
-
+pretty_html_table
