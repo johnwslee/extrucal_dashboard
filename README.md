@@ -24,3 +24,23 @@ The [dashboard](https://extrucal.onrender.com/) consists of 5 main sections:
 All plots are updated when the user presses enter or clicks out of the box.  
 
 ![](https://github.com/johnwslee/extrucal_dashboard/blob/main/img/extrucal_dashboard_demo.gif)
+
+## How to Run the Dashboard Locally
+
+To download the contents of this GitHub page on to your local machine follow these steps:
+
+1. Copy and paste the following link: `git clone https://github.com/johnwslee/extrucal_dashboard.git` to your Terminal.
+
+2. On your terminal, type: `cd extrucal_dashboard`.
+
+3. To run a development instance locally, first create a virtualenv by typing: `conda create --name new_env_name`
+
+4. Install the requirements from ***requirements.txt*** by typing: `pip install -r requirements.txt` 
+
+5. Type the following command if the environment isn't automatically activated after Step 3: `conda activate new_env_name`
+
+6. Launch ***app.py*** using the Python executable from the virtualenv: `python src/app.py`
+
+7. Using any modern web browser, visit http://127.0.0.1:8050/ to access the app.
+
+**Note that for Steps 3 - 6 to work smoothly, you have to be in the our_changing_world directory.**
