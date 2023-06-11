@@ -43,4 +43,4 @@ To download the contents of this GitHub page on to your local machine follow the
 
 7. Using any modern web browser, visit http://127.0.0.1:8050/ to access the app.
 
-**Note that for Steps 3 - 6 to work smoothly, you have to be in the our_changing_world directory.**
+**Note that for Steps 3 - 6 to work smoothly, you have to be in the extrucal_dashboard directory.**
