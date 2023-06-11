@@ -23,4 +23,4 @@ The [dashboard](https://extrucal.onrender.com/) consists of 5 main sections:
 
 All plots are updated when the user presses enter or clicks out of the box.  
 
-![](https://github.com/johnwslee/extrucal_dashboard/img/extrucal_dashboard_demo.gif)
+![](https://github.com/johnwslee/extrucal_dashboard/blob/main/img/extrucal_dashboard_demo.gif)
